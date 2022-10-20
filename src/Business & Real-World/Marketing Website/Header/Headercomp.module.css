@@ -1,0 +1,22 @@
+
+.headercompStyle{
+    display: flex;
+    background-color: azure;
+}
+.backMain {
+    display: flex;
+    height: 60px;
+    width: 300px;
+    background-image: url(../Img/shutterstock_565659754.webp);
+    background-size: cover;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.cartcopm{
+    margin-left:auto;
+    padding: 20px;
+   
+}

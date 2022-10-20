@@ -1,0 +1,9 @@
+.itemStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    margin: 60px;
+    /* background-color: darksalmon; */
+}
