@@ -8,7 +8,7 @@ import { Headercomp } from "./Header/Headercomp";
 export const MarketingWebsite = () => {
   return (
     <div>
-        <Headercomp/>
+      <Headercomp />
       <div className={style.MarketingWebsiteCss}>
         <TitleComp />
         <EventTextComp />

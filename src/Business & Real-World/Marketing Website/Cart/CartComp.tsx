@@ -15,8 +15,8 @@ export const CartComp = () => {
   const totalPrice = () => {
     if (prices.length > 0) {
       return prices.reduce((a: number, b: number) => a + b);
-    } else{
-      return 0
+    } else {
+      return 0;
     }
   };
   return (

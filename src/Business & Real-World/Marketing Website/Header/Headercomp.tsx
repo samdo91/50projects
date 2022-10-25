@@ -11,9 +11,8 @@ export const Headercomp = () => {
         perfume
       </Link>
       <div className={style.cartcopm}>
-        <Link to={"/LoginComp"}>로그인</Link>
-        |
-        <Link  to={"/CartComp"}>
+        <Link to={"/LoginComp"}>로그인</Link>|
+        <Link to={"/CartComp"}>
           {" "}
           <TiShoppingCart />
           장바구니

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Headercomp } from "../../Header/Headercomp";
 import { ProductList, useCartListDispatch } from "../../store/Context";
 import style from "./ItemDetailpage.module.css";
@@ -10,7 +9,20 @@ export const ItemDetailpage = () => {
   const itemNumber = Number(params.itemNumber);
   const item = products[itemNumber];
   const cartListDispatch = useCartListDispatch();
-  const handlerCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handlerAddCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+    cartListDispatch({
+      type: "addList",
+      payload: {
+        img: item.img,
+        name: item.name,
+        Volume: item.Volume,
+        price: item.price,
+        information: item.information,
+        modelnumber: item.modelnumber,
+      },
+    });
+  };
+  const handleGoToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
     cartListDispatch({
       type: "addList",
       payload: {
@@ -34,8 +46,11 @@ export const ItemDetailpage = () => {
         <li> {`price: ${item.price}`} </li>
         <li> {`information: ${item.information}`}</li>
       </ul>
-      <button onClick={handlerCart}> 장바구니 </button>
-      <button> 바로구매 </button>
+      <button onClick={handlerAddCart}> 장바구니 </button>
+      <button onClick={handleGoToCart}>
+        {" "}
+        <Link to={"/CartComp"}>바로구매 </Link>{" "}
+      </button>
     </div>
   );
 };

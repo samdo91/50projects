@@ -12,15 +12,14 @@ type tCartBoard = {
 export const CartBoard = (props: tCartBoard) => {
   const { item } = props;
   const cartListDispatch = useCartListDispatch();
-const HandlerCartDelete = (e:React.MouseEvent<HTMLSpanElement>) =>{
+  const HandlerCartDelete = (e: React.MouseEvent<HTMLSpanElement>) => {
     cartListDispatch({
-        type: "deleteList",
-        payload:{
-            modelnumber: item.modelnumber
-        }
-    })     
-    
-}
+      type: "deleteList",
+      payload: {
+        modelnumber: item.modelnumber,
+      },
+    });
+  };
 
   return (
     <div className={style.cartItem}>

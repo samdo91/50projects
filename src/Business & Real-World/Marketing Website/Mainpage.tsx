@@ -6,20 +6,17 @@ import { LoginComp } from "./Login/LoginComp";
 import { MarketingWebsite } from "./MarketingWebsite";
 import { Context } from "./store/Context";
 
-
 export const MainPage = () => {
-
-    return (
-        <Context>
-            <BrowserRouter>
-                <Routes>
-                    <Route path={"/"} element={<MarketingWebsite />} />
-                    <Route path=":itemNumber" element={<ItemDetailpage />} />
-                    <Route path={"/CartComp"} element={<CartComp/>} />
-                    <Route path={"/LoginComp"} element={<LoginComp/>} />
-                </Routes>
-            </BrowserRouter>
-        </Context>)
-
-
-}
+  return (
+    <Context>
+      <BrowserRouter>
+        <Routes>
+          <Route path={"/"} element={<MarketingWebsite />} />
+          <Route path=":itemNumber" element={<ItemDetailpage />} />
+          <Route path={"/CartComp"} element={<CartComp />} />
+          <Route path={"/LoginComp"} element={<LoginComp />} />
+        </Routes>
+      </BrowserRouter>
+    </Context>
+  );
+};
