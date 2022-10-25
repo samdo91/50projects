@@ -7,7 +7,7 @@
     display: flex;
     height: 60px;
     width: 300px;
-    background-image: url(../Img/shutterstock_565659754.webp);
+    background-image: url("../../../../public/Img/shutterstock_565659754.webp");
     background-size: cover;
     justify-content: space-around;
     align-items: center;

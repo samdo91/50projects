@@ -1,11 +1,11 @@
 .TitleStyle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: brown;
-    border: 1px solid black;
-    height: 300px;
-    width: 1800px;
-    background-image: url(../Img/shutterstock_565659754.webp);
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+  border: 1px solid black;
+  height: 300px;
+  width: 1800px;
+  background-image: url("../../../../public/Img/shutterstock_565659754.webp");
+  background-size: cover;
 }

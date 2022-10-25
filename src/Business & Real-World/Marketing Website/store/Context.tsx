@@ -1,7 +1,8 @@
 import { createContext, Dispatch, useContext, useReducer } from "react"
 
 import { cartListReducer } from "./cartListReducer"
-import { tcartAction, tcartState, tProductList, tProducts } from "./interfaces "
+import { tcartAction, tProductList, tProducts } from "./interfaces "
+import { loadCartList } from "./LocalStorage"
 import { Product } from "./ProductList"
 
 
@@ -9,13 +10,13 @@ import { Product } from "./ProductList"
 
 
 export const ProductList = createContext<tProducts[]>([])
-const cartLisContext = createContext<tcartState |[]>([])
+const cartLisContext = createContext<any>([])
 const cartListDispatchContext = createContext<Dispatch<tcartAction> | null>(null)
 
 
 export const Context= (props: tProductList) => {
 
-    const [cartList, cartListDispatch] = useReducer(cartListReducer, { cartList :[]} )
+    const [cartList, cartListDispatch] = useReducer(cartListReducer, { cartList :loadCartList()} )
 
    
 
