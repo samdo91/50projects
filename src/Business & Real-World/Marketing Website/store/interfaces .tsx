@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export type tProductList = {
   children: ReactNode;
@@ -10,11 +10,13 @@ export type tProducts = {
   price: number;
   information: string;
   modelnumber: number;
+  stock: number;
+  productStock: number
 };
 
 export type tcartAction =
   | {
-      type: "addList";
+      type: 'addList';
       payload: {
         img: string;
         name: string;
@@ -22,10 +24,13 @@ export type tcartAction =
         price: number;
         information: string;
         modelnumber: number;
+        stock: number;
+        productStock: number
+       
       };
     }
   | {
-      type: "deleteList";
+      type: 'deleteList';
       payload: {
         modelnumber: number;
       };

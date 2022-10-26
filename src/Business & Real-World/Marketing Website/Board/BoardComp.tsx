@@ -1,15 +1,16 @@
-import React, { useContext } from "react";
-import { ProductList } from "../store/Context";
-import { ItemComp } from "./Item/ItemComp";
-import style from "./BoardComp.module.css";
-import { Link, Outlet } from "react-router-dom";
+import React, { useContext } from 'react';
+import { ProductList } from '../store/Context';
+import { ItemComp } from './Item/ItemComp';
+import style from './BoardComp.module.css';
+import { Link, Outlet } from 'react-router-dom';
+import { tProducts } from '../store/interfaces ';
 
 export const BoardComp = () => {
   const Product = useContext(ProductList);
 
   return (
     <div className={style.boardstyle}>
-      {Product.map((item) => {
+      {Product.map((item:tProducts) => {
         return (
           <Link to={`${item.modelnumber}`} key={item.modelnumber}>
             <ItemComp
@@ -20,6 +21,8 @@ export const BoardComp = () => {
               modelnumber={item.modelnumber}
               name={item.name}
               price={item.price}
+              stock={item.stock}
+              productStock={item.productStock}
             />
           </Link>
         );

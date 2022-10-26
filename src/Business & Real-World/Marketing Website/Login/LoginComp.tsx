@@ -1,5 +1,5 @@
-import React from "react";
-import { Headercomp } from "../Header/Headercomp";
+import React from 'react';
+import { Headercomp } from '../Header/Headercomp';
 
 export const LoginComp = () => {
   return (

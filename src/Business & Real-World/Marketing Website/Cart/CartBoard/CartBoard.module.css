@@ -1,42 +1,42 @@
 .cartItem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 800px;
-  border: 1px solid black;
-  padding: 10px;
-  margin: 20px;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 800px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    align-items: center;
 }
 .cartImg {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 200px;
-  height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
 }
 
 .cartName {
-  display: flex;
-  align-items: center;
-  margin-left: 40px;
-  width: 400px;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    width: 400px;
 }
 
 .cartPrice {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-  width: 400px;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    width: 400px;
 }
 .cartStock {
-  display: flex;
-  align-items: center;
-  width: 300;
+    display: flex;
+    align-items: center;
+    width: 300;
 }
 
 .cartDelete {
-  width: 300px;
-  margin: 20px;
+    width: 300px;
+    margin: 20px;
 }

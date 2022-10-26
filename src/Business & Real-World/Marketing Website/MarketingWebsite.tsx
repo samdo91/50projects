@@ -1,9 +1,9 @@
-import React from "react";
-import { TitleComp } from "./Title/TitleComp";
-import style from "./MarketingWebsite.module.css";
-import { BoardComp } from "./Board/BoardComp";
-import { EventTextComp } from "./Board/EventText/EventTextComp";
-import { Headercomp } from "./Header/Headercomp";
+import React from 'react';
+import { TitleComp } from './Title/TitleComp';
+import style from './MarketingWebsite.module.css';
+import { BoardComp } from './Board/BoardComp';
+import { EventTextComp } from './Board/EventText/EventTextComp';
+import { Headercomp } from './Header/Headercomp';
 
 export const MarketingWebsite = () => {
   return (

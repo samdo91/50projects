@@ -1,9 +1,9 @@
-import { tcartAction, tcartState } from "./interfaces ";
-import { seveCartList } from "./LocalStorage";
+import { tcartAction, tcartState } from './interfaces ';
+import { seveCartList } from './LocalStorage';
 
 export const cartListReducer = (state: tcartState, action: tcartAction) => {
   switch (action.type) {
-    case "addList": {
+    case 'addList': {
       const newList = state.cartList.concat({
         img: action.payload.img,
         name: action.payload.name,
@@ -11,12 +11,14 @@ export const cartListReducer = (state: tcartState, action: tcartAction) => {
         price: action.payload.price,
         information: action.payload.information,
         modelnumber: action.payload.modelnumber,
+        stock: action.payload.stock,
+        productStock: action.payload.productStock
       });
 
       seveCartList(newList);
       return { cartList: newList };
     }
-    case "deleteList": {    
+    case 'deleteList': {
       const newList = state.cartList.filter((List: any) => {
         return action.payload.modelnumber !== List.modelnumber;
       });
