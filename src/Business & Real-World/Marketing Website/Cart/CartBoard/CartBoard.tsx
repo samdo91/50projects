@@ -1,10 +1,10 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react';
-import style from './CartBoard.module.css';
 import { FcFullTrash } from 'react-icons/fc';
 import { tProducts } from '../../store/interfaces ';
 import { Link } from 'react-router-dom';
 import { useCartListDispatch } from '../../store/Context';
-
+import { css } from '@emotion/react';
 type tCartBoard = {
   item: tProducts;
 };
@@ -20,21 +20,57 @@ export const CartBoard = (props: tCartBoard) => {
       },
     });
   };
+  const cartItem = css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 800px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    align-items: center;
+  `;
+  const cartImg = css`
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+  `;
+  const cartName = css` display: flex;
+align-items: center;
+margin-left: 40px;
+width: 400px;
+}
+`;
+  const cartPrice = css`
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    width: 400px;
+  `;
+  const cartStock = css`
+    display: flex;
+    align-items: center;
+    width: 300;
+  `;
 
+  const cartDelete = css`
+    width: 300px;
+    margin: 20px;
+  `;
   return (
-    <div className={style.cartItem}>
-      <img className={style.cartImg} src={item.img}></img>
-      <span className={style.cartName}>
-        {' '}
+    <div css={cartItem}>
+      <img css={cartImg} src={item.img}></img>
+      <span css={cartName}>
         <Link to={`/${item.modelnumber}`} key={item.modelnumber}>
-          {' '}
           {item.name}
         </Link>
       </span>
-      <span className={style.cartPrice}>{` price: ${item.price}`}</span>
-      <span className={style.cartStock}> {item.productStock} </span>
-      <span className={style.cartDelete} onClick={HandlerCartDelete}>
-        {' '}
+      <span css={cartPrice}>{` price: ${item.price}`}</span>
+      <span css={cartStock}> {item.productStock} </span>
+      <span css={cartDelete} onClick={HandlerCartDelete}>
         <FcFullTrash>제거</FcFullTrash>
       </span>
     </div>

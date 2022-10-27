@@ -1,9 +1,11 @@
+/** @jsxImportSource @emotion/react */
 import React, { useContext, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Headercomp } from '../../Header/Headercomp';
 import { ProductList, useCartListDispatch } from '../../store/Context';
-import style from './ItemDetailpage.module.css';
 import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
+import { css } from '@emotion/react';
+
 export const ItemDetailpage = () => {
   const products = useContext(ProductList);
   const params = useParams();
@@ -22,7 +24,7 @@ export const ItemDetailpage = () => {
         information: item.information,
         modelnumber: item.modelnumber,
         stock: item.stock,
-        productStock: productStock
+        productStock: productStock,
       },
     });
   };
@@ -37,8 +39,7 @@ export const ItemDetailpage = () => {
         information: item.information,
         modelnumber: item.modelnumber,
         stock: item.stock,
-        productStock: productStock
-
+        productStock: productStock,
       },
     });
   };
@@ -54,8 +55,12 @@ export const ItemDetailpage = () => {
     }
   };
 
+  const itemStyle = css`
+    background-color: pink;
+    min-height: 1000px;
+  `;
   return (
-    <div className={style.itemStyle}>
+    <div css={itemStyle}>
       <Headercomp />
       <img src={item.img}></img>
       <ul>

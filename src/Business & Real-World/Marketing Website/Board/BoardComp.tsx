@@ -1,16 +1,21 @@
+/** @jsxImportSource @emotion/react */
 import React, { useContext } from 'react';
 import { ProductList } from '../store/Context';
 import { ItemComp } from './Item/ItemComp';
-import style from './BoardComp.module.css';
 import { Link, Outlet } from 'react-router-dom';
 import { tProducts } from '../store/interfaces ';
+import { css } from '@emotion/react';
 
 export const BoardComp = () => {
   const Product = useContext(ProductList);
+  const boardstyle = css`
+    display: flex;
+    flex-wrap: wrap;
+  `;
 
   return (
-    <div className={style.boardstyle}>
-      {Product.map((item:tProducts) => {
+    <div css={boardstyle}>
+      {Product.map((item: tProducts) => {
         return (
           <Link to={`${item.modelnumber}`} key={item.modelnumber}>
             <ItemComp
