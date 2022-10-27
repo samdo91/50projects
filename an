@@ -1,0 +1,29 @@
+[33mcommit 32408a90c3bd38fb5fa0fe893ae15f6454b7e337[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: samdo91 <[fkdlzkfka@naver.com]>
+Date:   Wed Oct 26 16:07:31 2022 +0900
+
+    장바구니 스톡 만들어냄 30%정도 다음부터는 서버가 필요할 듯 emosstion
+
+[33mcommit a6dbcbf66e7e5365af57d99c9dbefa404cef02b1[m
+Author: samdo91 <[fkdlzkfka@naver.com]>
+Date:   Wed Oct 26 02:07:59 2022 +0900
+
+    생각보다 쉽게 해결 stock을 만들어야함. 일단 리스트에 갯수를 추가하고 구매 자체에도 그 갯수 만큼만 선택할 수 있게 하며 그 갯수만큼 가격을 변경해야함 .
+
+[33mcommit 713e5f4b9c5c0b20534bf9ceed08138b07948a66[m
+Author: samdo91 <[fkdlzkfka@naver.com]>
+Date:   Wed Oct 26 01:58:19 2022 +0900
+
+    헤더 장바구니 만듬 문제는 구매와 장바구니 사이에 관계를 제대로 설정 해야함 장바구니 버튼은 리스트에 프로덕트를 추가한다. 구매 버튼은 추가 후 장바구니로 이동한다.
+
+[33mcommit 8e85b97e5fa729217f358f66bda679ff5974271e[m
+Author: samdo91 <[fkdlzkfka@naver.com]>
+Date:   Thu Oct 20 17:12:44 2022 +0900
+
+    복구. 해더와 장바구니
+
+[33mcommit be1c7a530cfc3ca39e7ec87183b0b9ceec12f0b3[m
+Author: samdo91 <[fkdlzkfka@naver.com]>
+Date:   Wed Oct 19 13:57:15 2022 +0900
+
+    Initialize project using Create React App

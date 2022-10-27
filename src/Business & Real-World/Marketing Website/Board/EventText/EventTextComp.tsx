@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import { ProductList } from '../../store/Context';
 import { Link } from 'react-router-dom';
-import style from './EventTextComp.module.css';
+
 import { tProducts } from '../../store/interfaces ';
 import { css } from '@emotion/react';
 export const EventTextComp = () => {

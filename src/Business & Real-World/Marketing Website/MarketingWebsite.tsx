@@ -15,7 +15,7 @@ export const MarketingWebsite = () => {
     background-color: pink;
     min-height: 1000px;
   `;
-  
+
   return (
     <div>
       <Headercomp />
